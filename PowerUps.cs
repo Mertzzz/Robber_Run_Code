@@ -10,21 +10,10 @@ public class PowerUps : MonoBehaviour
 
     private bool isFlying = false;
 
-    
-
-    
-
-   
-
-    
-    
-
     void Start(){
 
             anim = GetComponent<Animator>();
-            
-            
-            
+                
               }
 
     private void OnTriggerEnter2D(Collider2D other){
@@ -60,8 +49,5 @@ public class PowerUps : MonoBehaviour
                 }
         }
 
-
-
-    
 }
 }
