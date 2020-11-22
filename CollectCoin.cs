@@ -15,11 +15,8 @@ public class CollectCoin : MonoBehaviour
     
 
     void Start(){
-
-           
-
+    
             tickSource = GetComponent<AudioSource> ();
-
     }
     
 
@@ -31,19 +28,9 @@ public class CollectCoin : MonoBehaviour
             textCoins.text = coin.ToString();
             
             Destroy(other.gameObject);
-        
-            
+       
         }
-
-        
-
-
     }
-
-    
-
-    
-
 
 }
 
