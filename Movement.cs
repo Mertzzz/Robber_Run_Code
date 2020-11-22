@@ -18,18 +18,8 @@ public class Movement : MonoBehaviour
 
   private Animator anim;
 
-  
-
-    
-
-  
-
-
-
 public float moveSpeed;
 public int SpeedWithTime = 20;
-
-
 
 
 void Start(){
@@ -46,12 +36,7 @@ public void FixedUpdate(){
  zaehler++;
  textscore.text = zaehler.ToString();
  
- 
 
- 
-
-
- 
 
  if (Input.GetKey (KeyCode.A)) {
  transform.Translate(Vector3.left * Time.deltaTime * moveSpeed, Space.Self);//LEFT
@@ -60,8 +45,6 @@ public void FixedUpdate(){
  if (Input.GetKey (KeyCode.D)) {
  transform.Translate(Vector3.right * Time.deltaTime * moveSpeed, Space.Self); //RIGHT
  }
- 
- 
 
  }
 
@@ -91,27 +74,7 @@ if(SpeedWithTime==40){
 
 }
 
-
-
  }
 
-
-
 }
-      
-  
-  
-    
 
-    
-
-
-
-     
-
-
-
-
-
-
-    
