@@ -6,19 +6,14 @@ using UnityEngine.Audio;
 public class Collision_Dmg : MonoBehaviour
 {
   
-  
     private Animator anim;
-   
-    
 
     void Start(){
 
          anim = GetComponent<Animator>();
-         
-        
+   
     }
 
-  
    public void OnTriggerEnter2D(Collider2D other){
 
 
@@ -31,13 +26,6 @@ public class Collision_Dmg : MonoBehaviour
             anim.Play("Hit");
             anim.SetBool("IsFlying",false);
             
-            
-            
-            
-
-            
-            
-            
 
         }
          
@@ -48,8 +36,7 @@ public class Collision_Dmg : MonoBehaviour
                  GetComponent<Health>().TakeDamage(1);
                  FindObjectOfType<AudioManager>().Play("PlayerHit");
                  anim.Play("Hit");
-                 
-
+     
 
             } else if(other.transform.tag=="Mülltonne")
             {
@@ -77,11 +64,7 @@ public class Collision_Dmg : MonoBehaviour
                  GetComponent<Health>().TakeDamage(1);
                  FindObjectOfType<AudioManager>().Play("PlayerHit");
                  anim.Play("Hit");
-                
-                 
-                 
-
-
+   
             }
             else if(other.transform.tag=="AutoGelb"){
 
@@ -89,22 +72,14 @@ public class Collision_Dmg : MonoBehaviour
                  GetComponent<Health>().TakeDamage(3);
                  anim.SetTrigger("IsCaught");
                  Destroy(GameObject.FindGameObjectWithTag("Polizist"));
-                 
-                 
-                 
-                 
-                   
-                   
-
+      
             }
              else if(other.transform.tag=="AutoBlau"){
 
                  GetComponent<Health>().TakeDamage(3);
                  anim.SetTrigger("IsCaught");
                  Destroy(GameObject.FindGameObjectWithTag("Polizist"));
-                 
-                   
-
+       
             }
              else if(other.transform.tag=="AutoRot"){
 
@@ -121,10 +96,7 @@ public class Collision_Dmg : MonoBehaviour
                  anim.SetTrigger("IsCaught");
                  Destroy(GameObject.FindGameObjectWithTag("Polizist"));
                  
-                 
-                   
-
-
+ 
             }
              else if(other.transform.tag=="Polizist"){
 
@@ -134,11 +106,6 @@ public class Collision_Dmg : MonoBehaviour
                  anim.SetTrigger("IsCaught");
                  Destroy(GameObject.FindGameObjectWithTag("Polizist"));
                  
-                
-                
-                
-                   
-
 
             }
              else if(other.transform.tag=="Stopschild"){
@@ -146,9 +113,7 @@ public class Collision_Dmg : MonoBehaviour
                  GetComponent<Health>().TakeDamage(1);
                  FindObjectOfType<AudioManager>().Play("PlayerHit");
                  anim.Play("Hit");
-               
-
-
+     
             }
              else if(other.transform.tag=="WarnungsSchild"){
 
@@ -173,25 +138,16 @@ public class Collision_Dmg : MonoBehaviour
                  GetComponent<Health>().TakeDamage(1);
                  FindObjectOfType<AudioManager>().Play("PlayerHit");
                  anim.Play("Hit");
-                
-
-
+       
             }
             else if(other.transform.tag=="Zaun2"){
 
                  GetComponent<Health>().TakeDamage(1);
                  FindObjectOfType<AudioManager>().Play("PlayerHit");
                  anim.Play("Hit");
-               
-
-
+        
             }
              
-
             }
 
             }
-
-            
-
-
